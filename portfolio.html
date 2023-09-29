@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/css/final.css" rel="stylesheet" />
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+</head>
+<body>   
+ <!-- Header Start -->
+ <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+    <div class="container">
+      <div class="relative flex items-center justify-between">
+        <div class="px-4">
+          <a href="#home" class="block py-6 text-lg font-bold text-primary">haryakastaa</a>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+            <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+          </button>
+
+          <nav
+            id="nav-menu"
+            class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+          >
+            <ul class="block lg:flex">
+              <li class="group">
+                <a href="index.html" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Beranda</a>
+              </li>
+              <li class="group">
+                <a href="index.html" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Tentang Saya</a>
+              </li>
+              <li class="group">
+                <a href="hobi.html" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Hobi</a>
+              </li>
+              <li class="group">
+                <a href="pendidikan.html" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Pendidikan</a>
+              </li>
+              <li class="group">
+                <a href="portfolio.html" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
+              </li>
+              <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                <div class="flex">
+                  <span class="mr-2 text-sm text-slate-500">light</span>
+                  <input type="checkbox" class="hidden" id="dark-toggle" />
+                  <label for="dark-toggle">
+                    <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                      <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                    </div>
+                  </label>
+                  <span class="ml-2 text-sm text-slate-500">dark</span>
+                </div>
+              </li>
+              </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800" style="height: 100vh;">
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="mx-auto mb-16 max-w-xl text-center">
+              <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
+              <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Project Terbaru</h2>
+              <p class="text-md font-medium text-secondary md:text-lg">
+                Belum ada projek pasti yang pernah di buat selain portfolio ini
+              </p>
+            </div>
+          </div>
+          
+          
+      <!-- Portfolio Section End -->
+      <script src="dist/js/script.js"></script>
+    </body>
+</html> 
